@@ -8,5 +8,10 @@ namespace Lemonade
 {
     class Game
     {
+        public void Rules()
+        {
+            Console.WriteLine("How to Play: ");
+        }
+
     }
 }

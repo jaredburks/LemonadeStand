@@ -8,5 +8,11 @@ namespace Lemonade
 {
     class Customer
     {
+        public double priceRange;
+        public int likesLemons;
+        public int likesSugar;
+        public int likesIce;
+        public int tempPreference;
+        public string weatherType;
     }
 }
