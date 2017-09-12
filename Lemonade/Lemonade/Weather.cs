@@ -9,24 +9,45 @@ namespace Lemonade
 {
     class Weather
     {
-        public void Temperature()//Randomize temp in degrees
-        {
+        int realTemp;
+        int degrees;
+        int type;
+        string skyType;
+        List<string> sky = new List<string>(new string[] {"sunny", "cloudy", "partly-cloudy", "rainy"});
+        Random num = new Random();
 
+        public int Temperature()//Randomize temp in degrees
+        {
+            degrees = num.Next(50, 100);
+            return degrees;
         }
 
-        public void WeatherType()//Randomize weather type
+        public string WeatherType()//Randomize weather type
         {
-
+            type = num.Next(0, 3); //>= 0 and < 3. 
+            skyType = sky[type]; //weatherType to match with customer's preference.
+            return skyType;
         }
 
-        public void Forecast()//Display Temp and weather type
+        public void Forecast(int foreTemp, string foreType)//Display Temp and weather type
         {
-
+            int predictTemp = Temperature();
+            string predictType = WeatherType();
+            //Console.WriteLine("The Forecast for today is: " + foreType + " and " + foreTemp + " degrees");
+            return;
         }
 
-        public void ActualWeather()//Takes Forecast and changes results by a few degrees or between one of the weatherTypesS
+        public void ActualWeather(int foreTemp, string foreType)//Takes Forecast and changes results by a few degrees or between one of the weatherTypesS
         {
-
+            Forecast(foreTemp, foreType);
+            //Change temp by -5 to +5 degrees
+            int difference = num.Next(-5,5);
+            realTemp = foreTemp + difference;
+            //Change type randomly again if actual degrees is -5/+5 different from forecast predicted Temperature.
+            if (realTemp % foreTemp == 5)
+            {
+                WeatherType();
+            }
         }
     }
 }
