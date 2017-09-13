@@ -12,5 +12,28 @@ namespace Lemonade
 {
     class Store
     {
+        Player player;
+
+        public Store(Player player)
+        {
+            this.player = player;
+        }
+
+        public void SellLemons()
+        {
+
+        }
+        public void SellCUps()
+        {
+
+        }
+        public void SellIce()
+        {
+
+        }
+        public void SellSugar()
+        {
+
+        }
     }
 }

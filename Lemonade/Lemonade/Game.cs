@@ -8,6 +8,7 @@ namespace Lemonade
 {
     class Game
     {
+        Player player = new Player();
         public void Rules()
         {
             Console.WriteLine("How to Play: ");
