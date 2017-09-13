@@ -8,5 +8,11 @@ namespace Lemonade
 {
     class Lemon
     {
+        public int expire;
+        public void Decay()//Rate at which Lemon goes bad.
+        {
+
+        }
+
     }
 }

@@ -14,5 +14,10 @@ namespace Lemonade
         public int likesIce;
         public int tempPreference;
         public string weatherType;
+
+        public void Buy()
+        {
+
+        }
     }
 }
