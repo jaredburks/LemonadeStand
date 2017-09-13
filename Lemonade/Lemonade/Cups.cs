@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//This class will interact with the Inventory class
+//Inventory 
 namespace Lemonade
 {
-    class Player
+    class Cups
     {
     }
 }
