@@ -10,6 +10,7 @@ namespace Lemonade
     {
         public Ice()
         {
+            expire = 1;
         }
     }
 }

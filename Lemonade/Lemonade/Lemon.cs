@@ -10,11 +10,20 @@ namespace Lemonade
     {
         public Lemon()
         {
+            expire = 2;
         }
 
-        public override void Decay()//Rate at which Lemon goes bad.
+        public override void Rotten()//Rate at which Lemon goes bad.
         {
-
+            //TODO: Destroy lemons
+            foreach (Lemon element in lemons)
+            {
+                if (element.expire == 0)
+                {
+                    lemons.Remove(element);
+                }
+            }
+            Console.WriteLine("All of your lemons spoiled.");
         }
 
     }

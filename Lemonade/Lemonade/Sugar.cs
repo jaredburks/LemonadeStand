@@ -10,6 +10,19 @@ namespace Lemonade
     {
         public Sugar()
         {
+            expire = 3;
+        }
+        public override void Rotten()//Rate at which sugar goes bad.
+        {
+            //TODO: Destroy sugar
+            foreach (Sugar element in sugar)
+            {
+                if (element.expire == 0)
+                {
+                    sugar.Remove(element);
+                }
+            }
+            Console.WriteLine("The sugar has bugs in it, it was thorwn out.");
         }
     }
 }
