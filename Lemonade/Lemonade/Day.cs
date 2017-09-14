@@ -8,5 +8,6 @@ namespace Lemonade
 {
     class Day
     {
+        List<Customer> customer;
     }
 }

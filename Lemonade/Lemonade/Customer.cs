@@ -15,9 +15,10 @@ namespace Lemonade
         public int tempPreference;
         public string weatherType;
 
-        public void Purchase()
+        public void Purchase()//If conditions for customer's preferences are made, buy lemonade.
         {
-
+            //TODO: decrement supplies(cups,ice,lemon,sugar)
+            //TODO: destory instance of self
         }
     }
 }
