@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lemonade
 {
-    class Lemon
+    class Lemon : Inventory
     {
-        public int expire;
-        public void Decay()//Rate at which Lemon goes bad.
+        public Lemon()
+        {
+        }
+
+        public override void Decay()//Rate at which Lemon goes bad.
         {
 
         }
