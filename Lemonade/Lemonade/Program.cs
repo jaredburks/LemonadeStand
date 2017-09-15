@@ -10,6 +10,9 @@ namespace Lemonade
     {
         static void Main(string[] args)
         {
+            Weather weather = new Weather();
+            weather.Forecast();
+            Console.ReadLine();
         }
     }
 }

@@ -10,9 +10,11 @@ namespace Lemonade
     {
         List<Customer> customer;
         int day;
-
+        Weather weather;
         public void DayShift()
         {
+            weather = new Weather();
+            weather.Forecast();
 
         }
     }

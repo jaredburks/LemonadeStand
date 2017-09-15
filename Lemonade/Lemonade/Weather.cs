@@ -29,22 +29,21 @@ namespace Lemonade
             return skyType;
         }
 
-        public void Forecast(int foreTemp, string foreType)//Display Temp and weather type
+        public void Forecast()//Sets weather type and temperature.
         {
             int predictTemp = Temperature();
             string predictType = WeatherType();
-            //Console.WriteLine("The Forecast for today is: " + foreType + " and " + foreTemp + " degrees");
+            Console.WriteLine("The Forecast for today is: " + predictType + " and " + predictTemp + " degrees");
             return;
         }
 
-        public void ActualWeather(int foreTemp, string foreType)//Takes Forecast and changes results by a few degrees or between one of the weatherTypesS
+        public void ActualWeather()//Takes Forecast and changes results by a few degrees or between one of the weatherTypesS
         {
-            Forecast(foreTemp, foreType);
             //Change temp by -5 to +5 degrees
             int difference = num.Next(-5,5);
-            realTemp = foreTemp + difference;
+            realTemp = degrees + difference;
             //Change type randomly again if actual degrees is -5/+5 different from forecast predicted Temperature.
-            if (realTemp % foreTemp == 5)
+            if (realTemp % degrees == 5)
             {
                 WeatherType();
             }
