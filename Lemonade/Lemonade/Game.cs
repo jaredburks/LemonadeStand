@@ -14,5 +14,12 @@ namespace Lemonade
             Console.WriteLine("How to Play: ");
         }
 
+        public void StartGame()
+        {
+            Console.WriteLine("Start a new 7 day game. Press any key to continue.");
+            Console.ReadLine();
+            //TODO:Start Day 1
+        }
+
     }
 }
