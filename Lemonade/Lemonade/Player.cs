@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 //This class will interact with the Store class
 namespace Lemonade
 {
-    class Player
+    public class Player
     {
-        string name;
-        int wallet;
+        public string name;
+        public double wallet = 20.00;
     }
 }
