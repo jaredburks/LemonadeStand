@@ -15,6 +15,7 @@ namespace Lemonade
     {
         Inventory stash;
         Player player;
+        Recipe recipe;
         string option = Console.ReadLine();
         public Store(Player player)
         {
@@ -23,21 +24,24 @@ namespace Lemonade
 
         public void SellToPlayer()
         {
-            Console.WriteLine("Welcome to the store, whatchu want?");
+            Console.WriteLine("Welcome to the store.\n Enter 1 to buy lemons\n Enter 2 to buy sugar\n Enter 3 to buy ice\n Enter 4 to buy cups\n Enter 5 to contine to recipe\n");
             switch (option)
             {
                 case "1"://buy lemons
                     SellLemons();
                     break;
                 case "2"://buy sugar
+                    SellSugar();
                     break;
                 case "3"://buy ice
+                    SellIce();
                     break;
                 case "4"://buy cups
                     SellCups();
                     break;
                 case "5":
-                    //Quit game or move to recipe
+                    //move on to recipe
+                    recipe.SupplyAmounts();
                     break;
                 default:
                     Console.WriteLine("Please pick a valid option");

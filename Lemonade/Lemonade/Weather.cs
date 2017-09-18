@@ -33,7 +33,7 @@ namespace Lemonade
         {
             int predictTemp = Temperature();
             string predictType = WeatherType();
-            Console.WriteLine("The Forecast for today is: " + predictType + " and " + predictTemp + " degrees");
+            Console.WriteLine("The Forecast for today is: " + predictType + " and " + predictTemp + " degrees\n");
             return;
         }
 
@@ -42,10 +42,12 @@ namespace Lemonade
             //Change temp by -5 to +5 degrees
             int difference = num.Next(-5,5);
             realTemp = degrees + difference;
+            Console.WriteLine("Today's Temperature: " + realTemp);
             //Change type randomly again if actual degrees is -5/+5 different from forecast predicted Temperature.
             if (realTemp % degrees == 5)
             {
                 WeatherType();
+                Console.WriteLine("Weather Forecast " + skyType);
             }
         }
     }

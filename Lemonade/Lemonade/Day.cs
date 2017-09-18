@@ -14,7 +14,7 @@ namespace Lemonade
         public void DayShift()
         {
             weather = new Weather();
-            weather.Forecast();
+            weather.ActualWeather();
 
         }
     }
