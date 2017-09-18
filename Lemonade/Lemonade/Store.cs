@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 //This class is for making the recipe for lemonade.
 //Parent class of ice, sugar, lemon
 //TODO:
-//adjust amount of lemons, sugar, and ice in lemonade
-//price for each item would adjust player's cash
-//set a price per cup for customers
+//Fix so cannot buy anything if player wallet is too low on cash
 namespace Lemonade
 {
     public class Store

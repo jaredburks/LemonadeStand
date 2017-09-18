@@ -9,11 +9,12 @@ namespace Lemonade
     public class Game
     {
         Player player;
-        int day;
+        int dayCount = 0;
         Weather weather = new Weather();
         Recipe recipe = new Recipe();
         Store store;
         Inventory inventory = new Inventory();
+        Day day = new Day();
         public void Rules()
         {
             Console.WriteLine("How to Play: ");
@@ -31,6 +32,7 @@ namespace Lemonade
             weather.Forecast();
             store.SellToPlayer();
             //TODO:Start Day 1
+            day.DayShift();
         }
 
     }

@@ -9,7 +9,6 @@ namespace Lemonade
     class Day
     {
         List<Customer> customer;
-        int day;
         Weather weather;
         public void DayShift()
         {

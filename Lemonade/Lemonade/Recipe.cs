@@ -37,7 +37,7 @@ namespace Lemonade
                     SupplyAmounts();
                     break;
                 case "5":
-                    break;
+                    return;
                 default:
                     Console.WriteLine("Please enter a valid option\n");
                     SupplyAmounts();
