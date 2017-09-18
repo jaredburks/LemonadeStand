@@ -8,5 +8,20 @@ namespace Lemonade
 {
     class Recipe
     {
+        public void SupplyAmounts()
+        {
+            string option = Console.ReadLine();
+            switch (option)
+            {
+                case "1":
+                    break;
+                case "2":
+                    break;
+                case "3":
+                    break;
+                case "4":
+                    break;
+            }
+        }
     }
 }
