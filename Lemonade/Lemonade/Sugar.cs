@@ -22,7 +22,7 @@ namespace Lemonade
                     sugar.Remove(element);
                 }
             }
-            Console.WriteLine("The sugar has bugs in it, it was thorwn out.");
+            Console.WriteLine("The sugar has bugs in it, it must be thorwn out.");
         }
     }
 }
