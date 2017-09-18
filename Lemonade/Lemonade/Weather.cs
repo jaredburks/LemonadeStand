@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 //The difference between the two will be a slight change in Temp. and weather type(sunny, cloudly, partly-cloudy, rainy) if any.
 namespace Lemonade
 {
-    class Weather
+    public class Weather
     {
-        int realTemp;
-        int degrees;
+        public int realTemp;
+        public int degrees;
         int type;
-        string skyType;
+        public string skyType;
         List<string> sky = new List<string>(new string[] {"sunny", "cloudy", "partly-cloudy", "rainy"});
         Random num = new Random();
 
@@ -29,26 +29,33 @@ namespace Lemonade
             return skyType;
         }
 
-        public void Forecast()//Sets weather type and temperature.
+        public string Forecast()//Sets weather type and temperature.
         {
             int predictTemp = Temperature();
             string predictType = WeatherType();
-            Console.WriteLine("The Forecast for today is: " + predictType + " and " + predictTemp + " degrees\n");
-            return;
+            string forecast = "The Forecast for today is: " + predictType + " and " + predictTemp + " degrees\n";
+            Console.WriteLine(forecast);
+            string realWeather = ActualWeather();
+            return realWeather;
         }
 
-        public void ActualWeather()//Takes Forecast and changes results by a few degrees or between one of the weatherTypesS
+        public string ActualWeather()//Takes Forecast and changes results by a few degrees or between one of the weatherTypesS
         {
+            string realWeather;
             //Change temp by -5 to +5 degrees
             int difference = num.Next(-5,5);
             realTemp = degrees + difference;
-            Console.WriteLine("Today's Temperature: " + realTemp);
             //Change type randomly again if actual degrees is -5/+5 different from forecast predicted Temperature.
             if (realTemp % degrees == 5)
             {
                 WeatherType();
-                Console.WriteLine("Weather Forecast " + skyType);
+                realWeather = "The Actual Weather for today is: " + skyType + " and " + realTemp + " degrees\n";
             }
+            else
+            {
+                realWeather = "The Actual Weather for today is: " + skyType + " and " + realTemp + " degrees\n";
+            }
+            return realWeather;
         }
     }
 }

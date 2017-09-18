@@ -12,9 +12,9 @@ namespace Lemonade
         public int cups = 10;
         public Pitcher()
         {
-            int cupsOfSugar = player.recipe.cupsOfSugar;
-            int icecubes = player.recipe.numIce;
-            int lemons = player.recipe.numLemon;
+            //int cupsOfSugar = player.recipe.cupsOfSugar;
+            //int icecubes = player.recipe.numIce;
+            //int lemons = player.recipe.numLemon;
         }
     }
 }

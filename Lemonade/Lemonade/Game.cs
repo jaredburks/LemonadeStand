@@ -10,9 +10,10 @@ namespace Lemonade
     {
         public Player player = new Player();
         int dayCount = 0;
-        Weather weather = new Weather();
+        public Weather weather = new Weather();
         Store store;
-        Day day = new Day();
+        public Day day = new Day();
+
         public void Rules()
         {
             Console.WriteLine("How to Play: ");
@@ -27,9 +28,10 @@ namespace Lemonade
             Console.ReadLine();
             Console.WriteLine("Start a new 7 day game. Press any key to continue.\n");
             Console.ReadLine();
-            weather.Forecast();
+            string prediction = weather.Forecast();
             store.SellToPlayer();
             //TODO:Start Day 1
+            Console.WriteLine(prediction);
             day.DayShift();
         }
 

@@ -8,11 +8,10 @@ namespace Lemonade
 {
     public class Recipe
     {
-        Inventory inventory = new Inventory();
-        public int numLemon;
-        public int cupsOfSugar;
-        public int numIce;
-        public double pricePerCup;
+        public int numLemon = 0;
+        public int cupsOfSugar = 0;
+        public int numIce = 0;
+        public double pricePerCup = 0.00;
         public void SupplyAmounts()
         {
             Console.WriteLine("Recipe\n\nChoose how much of each item to put in a pitcher of lemonade.");

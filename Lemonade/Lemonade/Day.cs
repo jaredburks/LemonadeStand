@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 //Has weather and list of different customers
 namespace Lemonade
 {
-    class Day
+    public class Day
     {
+        Game game;
         Customer patron;
         List<Customer> customer = new List<Customer>(new Customer[] { });
-        Weather weather;
         public void DayShift()
         {
-            weather = new Weather();
-            weather.ActualWeather();
-            
-            for(int i = 0; i < 100; i++)
+            for (int i = 0; i < 100; i++)
             {
                 customer.Add(new Customer());
             }
