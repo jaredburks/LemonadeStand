@@ -13,7 +13,6 @@ namespace Lemonade
         Weather weather = new Weather();
         Recipe recipe = new Recipe();
         Store store;
-        Inventory inventory = new Inventory();
         Day day = new Day();
         public void Rules()
         {
@@ -24,6 +23,7 @@ namespace Lemonade
         {
             player = new Player();
             store = new Store(player);
+            // player.inventory.cups.Count;
             Rules();
             Console.WriteLine("Press any key to continue.\n");
             Console.ReadLine();

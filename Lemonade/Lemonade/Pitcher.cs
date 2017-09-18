@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 //Will take in amount of supplies from recipe. 
 namespace Lemonade
 {
-    class Pitcher
+    public class Pitcher
     {
+        Recipe recipe = new Recipe();
+        public Pitcher()
+        {
+            int cups = inventory.cups[i];
+        }
     }
 }

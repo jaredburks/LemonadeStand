@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //Sugar will decay/go bad after 2 days
 namespace Lemonade
 {
-    class Sugar : Inventory
+    public class Sugar : Inventory
     {
         public Sugar()
         {

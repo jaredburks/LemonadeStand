@@ -9,9 +9,9 @@ namespace Lemonade
     public class Recipe
     {
         Inventory inventory = new Inventory();
-        int numLemon;
-        int cupsOfSugar;
-        int numIce;
+        public int numLemon;
+        public int cupsOfSugar;
+        public int numIce;
         public double pricePerCup;
         public void SupplyAmounts()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //Inventory 
 namespace Lemonade
 {
-    class Cups
+    public class Cups
     {
     }
 }
