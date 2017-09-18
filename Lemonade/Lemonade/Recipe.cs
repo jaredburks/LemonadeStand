@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 //Will show the amount of supplies to subtract from inventory and be put in pitcher.
 namespace Lemonade
 {
-    class Recipe
+    public class Recipe
     {
         Inventory inventory = new Inventory();
         int numLemon;
         int cupsOfSugar;
         int numIce;
-        double pricePerCup;
+        public double pricePerCup;
         public void SupplyAmounts()
         {
             Console.WriteLine("Recipe\n\nChoose how much of each item to put in a pitcher of lemonade.");
