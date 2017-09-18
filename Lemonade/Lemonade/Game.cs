@@ -12,7 +12,7 @@ namespace Lemonade
         int day;
         Weather weather = new Weather();
         Recipe recipe = new Recipe();
-        Store store = new Store();
+        Store store;
         public void Rules()
         {
             Console.WriteLine("How to Play: ");
@@ -21,6 +21,7 @@ namespace Lemonade
         public void StartGame()
         {
             player = new Player();
+            store = new Store(player);
             Rules();
             Console.WriteLine("Press any key to continue.\n");
             Console.ReadLine();

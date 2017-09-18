@@ -21,10 +21,6 @@ namespace Lemonade
             this.player = player;
         }
 
-        public Store()
-        {
-        }
-
         public void SellToPlayer()
         {
             Console.WriteLine("Welcome to the store.\n Enter 1 to buy lemons\n Enter 2 to buy sugar\n Enter 3 to buy ice\n Enter 4 to buy cups\n Enter 5 to contine to recipe\n");
