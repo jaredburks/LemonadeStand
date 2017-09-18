@@ -11,9 +11,7 @@ namespace Lemonade
 {
     public class Store
     {
-        Inventory stash = new Inventory();
         Player player;
-        Recipe recipe = new Recipe();
         public Store(Player player)
         {
             this.player = player;
@@ -40,7 +38,7 @@ namespace Lemonade
                     break;
                 case "5":
                     //move on to recipe
-                    recipe.SupplyAmounts();
+                    player.recipe.SupplyAmounts();
                     break;
                 default:
                     Console.WriteLine("Please pick a valid option");
@@ -63,27 +61,27 @@ namespace Lemonade
                     player.wallet = player.wallet - 0.65;
                     for (int i = 0; i < 10; i++)
                     {
-                        stash.BuyLemons();
+                        player.inventory.BuyLemons();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " lemons\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.lemons.Count + " lemons\n");
                     SellToPlayer();
                     break;
                 case "2":
                     player.wallet = player.wallet - 2.35;
                     for (int i = 0; i < 30; i++)
                     {
-                        stash.BuyLemons();
+                        player.inventory.BuyLemons();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " lemons\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.lemons.Count + " lemons\n");
                     SellToPlayer();
                     break;
                 case "3":
                     player.wallet = player.wallet - 4.35;
                     for (int i = 0; i < 75; i++)
                     {
-                        stash.BuyLemons();
+                        player.inventory.BuyLemons();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " lemons\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.lemons.Count + " lemons\n");
                     SellToPlayer();
                     break;
                 default:
@@ -109,27 +107,27 @@ namespace Lemonade
                     player.wallet = player.wallet - 1.12;
                     for (int i = 0; i < 25; i++)
                     {
-                        stash.BuyCups();
+                        player.inventory.BuyCups();
                     }
-                    Console.WriteLine(player.name + " has " + stash.cups.Count + " cups\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.cups.Count + " cups\n");
                     SellToPlayer();
                     break;
                 case "2":
                     player.wallet = player.wallet - 1.75;
                     for (int i = 0; i < 50; i++)
                     {
-                        stash.BuyCups();
+                        player.inventory.BuyCups();
                     }
-                    Console.WriteLine(player.name + " has " + stash.cups.Count + " cups\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.cups.Count + " cups\n");
                     SellToPlayer();
                     break;
                 case "3":
                     player.wallet = player.wallet - 3.25;
                     for (int i = 0; i < 100; i++)
                     {
-                        stash.BuyCups();
+                        player.inventory.BuyCups();
                     }
-                    Console.WriteLine(player.name + " has " + stash.cups.Count + " cups\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.cups.Count + " cups\n");
                     SellToPlayer();
                     break;
                 default:
@@ -156,27 +154,27 @@ namespace Lemonade
                     player.wallet = player.wallet - 0.91;
                     for (int i = 0; i < 100; i++)
                     {
-                        stash.BuyIce();
+                        player.inventory.BuyIce();
                     }
-                    Console.WriteLine(player.name + " has " + stash.ice.Count + " icecubes\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.ice.Count + " icecubes\n");
                     SellToPlayer();
                     break;
                 case "2":
                     player.wallet = player.wallet - 2.73;
                     for (int i = 0; i < 250; i++)
                     {
-                        stash.BuyIce();
+                        player.inventory.BuyIce();
                     }
-                    Console.WriteLine(player.name + " has " + stash.ice.Count + " icecubes\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.ice.Count + " icecubes\n");
                     SellToPlayer();
                     break;
                 case "3":
                     player.wallet = player.wallet - 4.12;
                     for (int i = 0; i < 500; i++)
                     {
-                        stash.BuyIce();
+                        player.inventory.BuyIce();
                     }
-                    Console.WriteLine(player.name + " has " + stash.ice.Count + " icecubes\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.ice.Count + " icecubes\n");
                     SellToPlayer();
                     break;
                 default:
@@ -203,27 +201,27 @@ namespace Lemonade
                     player.wallet = player.wallet - .72;
                     for (int i = 0; i < 10; i++)
                     {
-                        stash.BuySugar();
+                        player.inventory.BuySugar();
                     }
-                    Console.WriteLine(player.name + " has " + stash.sugar.Count + " cups of sugar\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.sugar.Count + " cups of sugar\n");
                     SellToPlayer();
                     break;
                 case "2":
                     player.wallet = player.wallet - 1.41;
                     for (int i = 0; i < 25; i++)
                     {
-                        stash.BuySugar();
+                        player.inventory.BuySugar();
                     }
-                    Console.WriteLine(player.name + " has " + stash.sugar.Count + " cups of sugar\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.sugar.Count + " cups of sugar\n");
                     SellToPlayer();
                     break;
                 case "3":
                     player.wallet = player.wallet - 2.63;
                     for (int i = 0; i < 50; i++)
                     {
-                        stash.BuySugar();
+                        player.inventory.BuySugar();
                     }
-                    Console.WriteLine(player.name + " has " + stash.sugar.Count + " cups of sugar\n");
+                    Console.WriteLine(player.name + " has " + player.inventory.sugar.Count + " cups of sugar\n");
                     SellToPlayer();
                     break;
                 default:
