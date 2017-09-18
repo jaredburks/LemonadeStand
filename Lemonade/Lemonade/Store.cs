@@ -62,7 +62,7 @@ namespace Lemonade
             switch (deal)
             {
                 case "1":
-                    player.wallet -= player.wallet - 0.65;
+                    player.wallet = player.wallet - 0.65;
                     for (int i = 0; i < 10; i++)
                     {
                         stash.BuyLemons();
@@ -71,7 +71,7 @@ namespace Lemonade
                     SellToPlayer();
                     break;
                 case "2":
-                    player.wallet -= player.wallet - 2.35;
+                    player.wallet = player.wallet - 2.35;
                     for (int i = 0; i < 30; i++)
                     {
                         stash.BuyLemons();
@@ -80,7 +80,7 @@ namespace Lemonade
                     SellToPlayer();
                     break;
                 case "3":
-                    player.wallet -= player.wallet - 4.35;
+                    player.wallet = player.wallet - 4.35;
                     for (int i = 0; i < 75; i++)
                     {
                         stash.BuyLemons();
@@ -108,30 +108,30 @@ namespace Lemonade
             switch (deal)
             {
                 case "1":
-                    player.wallet -= player.wallet - 1.12;
+                    player.wallet = player.wallet - 1.12;
                     for (int i = 0; i < 25; i++)
                     {
                         stash.BuyCups();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " cups\n");
+                    Console.WriteLine(player.name + " has " + stash.cups.Count + " cups\n");
                     SellToPlayer();
                     break;
                 case "2":
-                    player.wallet -= player.wallet - 1.75;
+                    player.wallet = player.wallet - 1.75;
                     for (int i = 0; i < 50; i++)
                     {
                         stash.BuyCups();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " cups\n");
+                    Console.WriteLine(player.name + " has " + stash.cups.Count + " cups\n");
                     SellToPlayer();
                     break;
                 case "3":
-                    player.wallet -= player.wallet - 3.25;
+                    player.wallet = player.wallet - 3.25;
                     for (int i = 0; i < 100; i++)
                     {
                         stash.BuyCups();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " cups\n");
+                    Console.WriteLine(player.name + " has " + stash.cups.Count + " cups\n");
                     SellToPlayer();
                     break;
                 default:
@@ -155,30 +155,30 @@ namespace Lemonade
             switch (deal)
             {
                 case "1":
-                    player.wallet -= player.wallet - 0.91;
+                    player.wallet = player.wallet - 0.91;
                     for (int i = 0; i < 100; i++)
                     {
                         stash.BuyIce();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " icecubes\n");
+                    Console.WriteLine(player.name + " has " + stash.ice.Count + " icecubes\n");
                     SellToPlayer();
                     break;
                 case "2":
-                    player.wallet -= player.wallet - 2.73;
+                    player.wallet = player.wallet - 2.73;
                     for (int i = 0; i < 250; i++)
                     {
                         stash.BuyIce();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " icecubes\n");
+                    Console.WriteLine(player.name + " has " + stash.ice.Count + " icecubes\n");
                     SellToPlayer();
                     break;
                 case "3":
-                    player.wallet -= player.wallet - 4.12;
+                    player.wallet = player.wallet - 4.12;
                     for (int i = 0; i < 500; i++)
                     {
                         stash.BuyIce();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " icecubes\n");
+                    Console.WriteLine(player.name + " has " + stash.ice.Count + " icecubes\n");
                     SellToPlayer();
                     break;
                 default:
@@ -202,30 +202,30 @@ namespace Lemonade
             switch (deal)
             {
                 case "1":
-                    player.wallet -= player.wallet - .72;
+                    player.wallet = player.wallet - .72;
                     for (int i = 0; i < 10; i++)
                     {
                         stash.BuySugar();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " cups of sugar\n");
+                    Console.WriteLine(player.name + " has " + stash.sugar.Count + " cups of sugar\n");
                     SellToPlayer();
                     break;
                 case "2":
-                    player.wallet -= player.wallet - 1.41;
+                    player.wallet = player.wallet - 1.41;
                     for (int i = 0; i < 25; i++)
                     {
                         stash.BuySugar();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " cups of sugar\n");
+                    Console.WriteLine(player.name + " has " + stash.sugar.Count + " cups of sugar\n");
                     SellToPlayer();
                     break;
                 case "3":
-                    player.wallet -= player.wallet - 2.63;
+                    player.wallet = player.wallet - 2.63;
                     for (int i = 0; i < 50; i++)
                     {
                         stash.BuySugar();
                     }
-                    Console.WriteLine(player.name + " has " + stash.lemons.Count + " cups of sugar\n");
+                    Console.WriteLine(player.name + " has " + stash.sugar.Count + " cups of sugar\n");
                     SellToPlayer();
                     break;
                 default:
