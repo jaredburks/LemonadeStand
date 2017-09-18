@@ -8,6 +8,7 @@ namespace Lemonade
 {
     class Day
     {
+        Customer patron;
         List<Customer> customer = new List<Customer>(new Customer[] { });
         Weather weather;
         public void DayShift()

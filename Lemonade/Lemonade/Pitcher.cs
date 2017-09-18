@@ -8,10 +8,13 @@ namespace Lemonade
 {
     public class Pitcher
     {
-        Recipe recipe = new Recipe();
+        Player player;
         public Pitcher()
         {
-            int cups = inventory.cups[i];
+            int cups = 10;
+            int cupsOfSugar = player.recipe.cupsOfSugar;
+            int icecubes = player.recipe.numIce;
+            int lemons = player.recipe.numLemon;
         }
     }
 }

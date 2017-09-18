@@ -8,10 +8,9 @@ namespace Lemonade
 {
     public class Game
     {
-        Player player;
+        public Player player = new Player();
         int dayCount = 0;
         Weather weather = new Weather();
-        Recipe recipe = new Recipe();
         Store store;
         Day day = new Day();
         public void Rules()
@@ -21,7 +20,6 @@ namespace Lemonade
 
         public void StartGame()
         {
-            player = new Player();
             store = new Store(player);
             // player.inventory.cups.Count;
             Rules();
