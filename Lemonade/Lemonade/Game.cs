@@ -13,6 +13,7 @@ namespace Lemonade
         Weather weather = new Weather();
         Recipe recipe = new Recipe();
         Store store;
+        Inventory inventory = new Inventory();
         public void Rules()
         {
             Console.WriteLine("How to Play: ");

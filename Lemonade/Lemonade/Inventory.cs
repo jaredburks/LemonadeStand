@@ -8,10 +8,10 @@ namespace Lemonade
 {
     class Inventory
     {
-        public List<Lemon> lemons;
-        public List<Cups> cups;
-        public List<Sugar> sugar;
-        public List<Ice> ice;
+        public List<Lemon> lemons = new List<Lemon>(new Lemon[] {});
+        public List<Cups> cups = new List<Cups>(new Cups[] { });
+        public List<Sugar> sugar = new List<Sugar>(new Sugar[] { });
+        public List<Ice> ice = new List<Ice>(new Ice[] { });
         public int expire;
 
         //figure out how to have one buy method for all 4 products(lemon, ice, sugar, cups). Look up "Generics"
