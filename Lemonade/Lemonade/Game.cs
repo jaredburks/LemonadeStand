@@ -8,7 +8,7 @@ namespace Lemonade
 {
     public class Game
     {
-        Player player = new Player();
+        Player player;
         int day;
         Weather weather = new Weather();
         Recipe recipe = new Recipe();
@@ -20,6 +20,7 @@ namespace Lemonade
 
         public void StartGame()
         {
+            player = new Player();
             Rules();
             Console.WriteLine("Press any key to continue.\n");
             Console.ReadLine();
@@ -27,7 +28,6 @@ namespace Lemonade
             Console.ReadLine();
             weather.Forecast();
             store.SellToPlayer();
-            recipe.SupplyAmounts();
             //TODO:Start Day 1
         }
 

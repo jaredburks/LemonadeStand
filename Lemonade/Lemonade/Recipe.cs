@@ -15,8 +15,8 @@ namespace Lemonade
         double pricePerCup;
         public void SupplyAmounts()
         {
-            Console.WriteLine("Recipe\n Choose how much of each item to put in a pitcher of lemonade.");
-            Console.WriteLine("Enter 1 for price per cup\n Enter 2 for number of lemons\n Enter 3 for cups of sugar\n Enter 4 for icecubes per cup\n Enter 5 to Begin Selling Lemonade");
+            Console.WriteLine("Recipe\n\nChoose how much of each item to put in a pitcher of lemonade.");
+            Console.WriteLine(" Enter 1 for price per cup\n Enter 2 for number of lemons\n Enter 3 for cups of sugar\n Enter 4 for icecubes per cup\n Enter 5 to Begin Selling Lemonade");
             string option = Console.ReadLine();
             switch (option)
             {

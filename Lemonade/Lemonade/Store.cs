@@ -15,8 +15,7 @@ namespace Lemonade
     {
         Inventory stash;
         Player player;
-        Recipe recipe;
-        string option = Console.ReadLine();
+        Recipe recipe = new Recipe();
         public Store(Player player)
         {
             this.player = player;
@@ -29,6 +28,7 @@ namespace Lemonade
         public void SellToPlayer()
         {
             Console.WriteLine("Welcome to the store.\n Enter 1 to buy lemons\n Enter 2 to buy sugar\n Enter 3 to buy ice\n Enter 4 to buy cups\n Enter 5 to contine to recipe\n");
+            string option = Console.ReadLine();
             switch (option)
             {
                 case "1"://buy lemons
