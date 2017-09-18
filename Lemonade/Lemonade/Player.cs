@@ -8,7 +8,7 @@ namespace Lemonade
 {
     public class Player
     {
-        public string name;
+        public string name = "Player1";
         public double wallet = 20.00;
     }
 }

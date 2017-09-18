@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 //set a price per cup for customers
 namespace Lemonade
 {
-    class Store
+    public class Store
     {
         Inventory stash;
         Player player;
@@ -20,6 +20,10 @@ namespace Lemonade
         public Store(Player player)
         {
             this.player = player;
+        }
+
+        public Store()
+        {
         }
 
         public void SellToPlayer()

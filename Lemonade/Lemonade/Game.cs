@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lemonade
 {
-    class Game
+    public class Game
     {
         Player player = new Player();
         int day;
-        Weather weather;
-        Recipe recipe;
-        Store store;
+        Weather weather = new Weather();
+        Recipe recipe = new Recipe();
+        Store store = new Store();
         public void Rules()
         {
             Console.WriteLine("How to Play: ");
