@@ -8,10 +8,10 @@ namespace Lemonade
 {
     public class Inventory
     {
-        public List<Lemon> lemons = new List<Lemon>(new Lemon[] {});
-        public List<Cups> cups = new List<Cups>(new Cups[] { });
-        public List<Sugar> sugar = new List<Sugar>(new Sugar[] { });
-        public List<Ice> ice = new List<Ice>(new Ice[] { });
+        public List<Lemon> lemons = new List<Lemon>();
+        public List<Cups> cups = new List<Cups>();
+        public List<Sugar> sugar = new List<Sugar>();
+        public List<Ice> ice = new List<Ice>();
 
         //figure out how to have one buy method for all 4 products(lemon, ice, sugar, cups). Look up "Generics"
         /*public void Buy()//Calls Sell method from store class which would tell how many lemons,ice, ect to add to list.
