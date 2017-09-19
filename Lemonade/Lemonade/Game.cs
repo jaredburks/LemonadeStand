@@ -16,7 +16,11 @@ namespace Lemonade
 
         public void Rules()
         {
-            Console.WriteLine("How to Play: ");
+            Console.WriteLine("How to Play:\nYour goal is to make as much money as you can in 7 days by selling lemonade at your lemonade stand.");
+            Console.WriteLine("Buy cups, lemons, sugar, and ice cubes, then set your recipe based on the weather and conditions.");
+            Console.WriteLine("Start with the basic recipe, but try to vary the recipe and see if you can do better.");
+            Console.WriteLine("Lastly, set your price and sell your lemonade at the stand. Try changing up the price based on the weather conditions as well.");
+            Console.WriteLine("At the end of the game, you'll see how much money you made. Play again to try and beat your score!\n");
         }
 
         public void StartGame()
