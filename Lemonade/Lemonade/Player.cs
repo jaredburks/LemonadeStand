@@ -11,7 +11,7 @@ namespace Lemonade
         public string name = "Player1";
         public double wallet = 20.00;
         public Inventory inventory = new Inventory();
-        public Pitcher pitcher = new Pitcher();
         public Recipe recipe = new Recipe();
+        public Pitcher pitcher = new Pitcher();
     }
 }

@@ -35,10 +35,6 @@ namespace Lemonade
         {
             sugar.Add(new Sugar());
         }
-        public virtual void Decay()//Rate at which supplies goes bad. Ice will be default since it will melt everyday.
-        {
-            //TODO:After each day expire will decrease by 1 and once it hits 0 call Rotten method to destroy obects
-        }
 
         public virtual void Rotten()//Will destroy expired supplies and give a message
         {

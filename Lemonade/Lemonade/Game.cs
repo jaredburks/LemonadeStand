@@ -22,7 +22,6 @@ namespace Lemonade
         public void StartGame()
         {
             store = new Store(player);
-            // player.inventory.cups.Count;
             Rules();
             Console.WriteLine("Press any key to continue.\n");
             Console.ReadLine();
