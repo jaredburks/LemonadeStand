@@ -12,7 +12,6 @@ namespace Lemonade
         public List<Cups> cups = new List<Cups>(new Cups[] { });
         public List<Sugar> sugar = new List<Sugar>(new Sugar[] { });
         public List<Ice> ice = new List<Ice>(new Ice[] { });
-        public int expire;
 
         //figure out how to have one buy method for all 4 products(lemon, ice, sugar, cups). Look up "Generics"
         /*public void Buy()//Calls Sell method from store class which would tell how many lemons,ice, ect to add to list.
@@ -34,19 +33,6 @@ namespace Lemonade
         public void BuySugar()
         {
             sugar.Add(new Sugar());
-        }
-
-        public virtual void Rotten()//Will destroy expired supplies and give a message
-        {
-            //TODO: Destroy ice
-            foreach(Ice element in ice)
-            {
-                if(element.expire == 0)
-                {
-                    ice.Remove(element);
-                }
-            }
-            Console.WriteLine("All of your ice cubes melted.");
         }
     }
 }

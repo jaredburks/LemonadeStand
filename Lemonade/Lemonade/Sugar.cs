@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //Sugar will decay/go bad after 2 days
 namespace Lemonade
 {
-    public class Sugar : Inventory
+    public class Sugar : Item
     {
         public Sugar()
         {
@@ -15,11 +15,11 @@ namespace Lemonade
         public override void Rotten()//Rate at which sugar goes bad.
         {
             //TODO: Destroy sugar
-            foreach (Sugar element in sugar)
+            foreach (Sugar element in inventory.sugar)
             {
                 if (element.expire == 0)
                 {
-                    sugar.Remove(element);
+                    inventory.sugar.Remove(element);
                 }
             }
             Console.WriteLine("The sugar has bugs in it, it must be thorwn out.");

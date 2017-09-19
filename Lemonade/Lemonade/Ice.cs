@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lemonade
 {
-    public class Ice : Inventory
+    public class Ice : Item
     {
         public Ice()
         {
