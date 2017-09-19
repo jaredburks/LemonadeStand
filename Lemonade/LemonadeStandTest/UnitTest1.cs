@@ -9,11 +9,14 @@ namespace LemonadeStandTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()//Test that BuyLemons() method adds Lemon to List<Lemon> lemons
+        public void TestBuyLemons()//Test that BuyLemons() method adds Lemon to List<Lemon> lemons
         {
-            Inventory inventory;
-            List<Lemon> lemons = new List<Lemon>(new Lemon[] { });
-            inventory.BuyLemons();
+            Player player = new Player();
+            int expectedResult = 1;
+
+            player.inventory.BuyLemons();
+
+            Assert.AreEqual(expectedResult, player.inventory.lemons.Count);
         }
     }
 }
