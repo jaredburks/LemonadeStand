@@ -8,8 +8,7 @@ namespace Lemonade
 {
     public class Day
     {
-        Game game;
-        Customer patron;
+        Player player;
         List<Customer> customer = new List<Customer>(new Customer[] { });
         public void DayShift()
         {
@@ -17,12 +16,10 @@ namespace Lemonade
             {
                 customer.Add(new Customer());
             }
-
             foreach(Customer element in customer)
             {
-                element.Purchase();
+                element.Purchase(player);
             }
-
         }
     }
 }

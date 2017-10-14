@@ -9,11 +9,10 @@ namespace Lemonade
     public class Game
     {
         public Player player = new Player();
-        int dayCount = 0;
+        public Day day = new Day();
         public Weather weather = new Weather();
         Store store;
-        public Day day = new Day();
-
+        int dayCount = 0;
         public void Rules()
         {
             Console.WriteLine("How to Play:\nYour goal is to make as much money as you can in 7 days by selling lemonade at your lemonade stand.");
@@ -22,7 +21,6 @@ namespace Lemonade
             Console.WriteLine("Lastly, set your price and sell your lemonade at the stand. Try changing up the price based on the weather conditions as well.");
             Console.WriteLine("At the end of the game, you'll see how much money you made. Play again to try and beat your score!\n");
         }
-
         public void StartGame()
         {
             store = new Store(player);
@@ -37,6 +35,5 @@ namespace Lemonade
             Console.WriteLine(prediction);
             day.DayShift();
         }
-
     }
 }

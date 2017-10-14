@@ -15,13 +15,12 @@ namespace Lemonade
         public int tempPreference;
         public string weatherType;
 
-        Game game;
-        public void Purchase()//If conditions for customer's preferences are made, buy lemonade.
+        public void Purchase(Player player)//If conditions for customer's preferences are made, buy lemonade.
         {
             //TODO: decrement cup from pitcher class.
-            game.player.pitcher.cups = game.player.pitcher.cups - 1;
+            player.pitcher.cups -= 1;
             //TODO: Add money to player.wallet
-            game.player.wallet = game.player.wallet + game.player.recipe.pricePerCup;
+            player.wallet += player.recipe.pricePerCup;
             //TODO: destory instance of self
         }
     }
