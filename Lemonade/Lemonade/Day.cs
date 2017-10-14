@@ -8,9 +8,8 @@ namespace Lemonade
 {
     public class Day
     {
-        Player player;
         List<Customer> customer = new List<Customer>(new Customer[] { });
-        public void DayShift()
+        public void DayShift(Player player)
         {
             for (int i = 0; i < 100; i++)
             {

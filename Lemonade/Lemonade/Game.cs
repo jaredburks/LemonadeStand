@@ -33,7 +33,7 @@ namespace Lemonade
             store.SellToPlayer();
             //TODO:Start Day 1
             Console.WriteLine(prediction);
-            day.DayShift();
+            day.DayShift(player);
         }
     }
 }
