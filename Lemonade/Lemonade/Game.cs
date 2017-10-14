@@ -29,11 +29,16 @@ namespace Lemonade
             Console.ReadLine();
             Console.WriteLine("Start a new 7 day game. Press any key to continue.\n");
             Console.ReadLine();
+            //Need to loop thru 7 days
             string prediction = weather.Forecast();
             store.SellToPlayer();
             //TODO:Start Day 1
             Console.WriteLine(prediction);
             day.DayShift(player);
+            //TODO:Show profit from day.
+            //TODO:Next day(for 7 days)
+            //TODO:Show total profit
+            //TODO:Link to database to save results(Name, profit)
         }
     }
 }
