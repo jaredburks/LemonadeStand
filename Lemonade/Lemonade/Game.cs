@@ -29,12 +29,9 @@ namespace Lemonade
         {
             Console.WriteLine("Enter your name:");
             player = new Player();
-            dayCount = 0;
             store = new Store(player);
             Rules();
-            Console.WriteLine("Press any key to continue.\n");
-            Console.ReadLine();
-            Console.WriteLine("Start a new 7 day game. Press any key to continue.\n");
+            Console.WriteLine("Press any key to start a new 7 day game.\n");
             Console.ReadLine();
             PlayGame();
             GetTotalProfit();
@@ -43,7 +40,8 @@ namespace Lemonade
         }
         public void PlayGame()
         {
-            while(dayCount < 7)
+            dayCount = 0;
+            while (dayCount < 7)
             {
                 prediction = weather.Forecast();
                 store.SellToPlayer();
