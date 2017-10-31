@@ -34,7 +34,6 @@ namespace Lemonade
             Console.WriteLine("Press any key to start a new 7 day game.\n");
             Console.ReadLine();
             PlayGame();
-            GetTotalProfit();
             PlayAgain();
             //TODO:Link to database to save results(Name, profit)
         }
@@ -54,14 +53,15 @@ namespace Lemonade
                 GetDayProfit();
                 dayCount++;
             }
+            GetTotalProfit();
         }
         public void GetDayProfit()
         {
-            Console.WriteLine("Day's Profit: $" + dayProfit + "\n");
+            Console.WriteLine("Day's Profit: $" + dayProfit.ToString("#.##") + "\n");
         }
         public void GetTotalProfit()
         {
-            Console.WriteLine("Total Profit: $" + totalProfit + "\n");
+            Console.WriteLine("Total Profit: $" + totalProfit.ToString("#.##") + "\n");
         }
         public void PlayAgain()
         {

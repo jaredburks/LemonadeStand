@@ -17,11 +17,10 @@ namespace Lemonade
 
         public void Purchase(Player player)//If conditions for customer's preferences are made, buy lemonade.
         {
-            //TODO: decrement cup from pitcher class.
+            //decrement cup from pitcher class.
             player.pitcher.cups -= 1;
-            //TODO: Add money to player.wallet
+            //Add money to player.wallet
             player.wallet += player.recipe.pricePerCup;
-            //TODO: destory instance of self
         }
     }
 }
