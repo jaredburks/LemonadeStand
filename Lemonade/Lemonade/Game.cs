@@ -12,7 +12,7 @@ namespace Lemonade
         public Day day = new Day();
         public Weather weather = new Weather();
         Store store;
-        int dayCount = 0;
+        int dayCount;
         string prediction;
         double cashBeforeShift;
         double dayProfit;
@@ -27,12 +27,20 @@ namespace Lemonade
         }
         public void StartGame()
         {
+            dayCount = 0;
             store = new Store(player);
             Rules();
             Console.WriteLine("Press any key to continue.\n");
             Console.ReadLine();
             Console.WriteLine("Start a new 7 day game. Press any key to continue.\n");
             Console.ReadLine();
+            PlayGame();
+            GetTotalProfit();
+            PlayAgain();
+            //TODO:Link to database to save results(Name, profit)
+        }
+        public void PlayGame()
+        {
             while(dayCount < 7)
             {
                 prediction = weather.Forecast();
@@ -46,17 +54,31 @@ namespace Lemonade
                 GetDayProfit();
                 dayCount++;
             }
-            GetTotalProfit();
-            Console.ReadLine();
-            //TODO:Link to database to save results(Name, profit)
         }
         public void GetDayProfit()
         {
-            Console.WriteLine("Day's Profit: $" + dayProfit);
+            Console.WriteLine("Day's Profit: $" + dayProfit + "\n");
         }
         public void GetTotalProfit()
         {
-            Console.WriteLine("Total Profit: $" + totalProfit);
+            Console.WriteLine("Total Profit: $" + totalProfit + "\n");
+        }
+        public void PlayAgain()
+        {
+            Console.WriteLine("Would you like to play again? Enter 'y' for yes, 'n' for no.");
+            string option;
+            switch (option = Console.ReadLine())
+            {
+                case "y":
+                    StartGame();
+                    break;
+                case "n":
+                    break;
+                default:
+                    Console.WriteLine("Please Enter 'y' to start new game or 'n' to quit game\n");
+                    PlayAgain();
+                    break;
+            }
         }
     }
 }
