@@ -8,9 +8,9 @@ namespace Lemonade
 {
     public class Game
     {
-        public Player player = new Player();
         public Day day = new Day();
         public Weather weather = new Weather();
+        public Player player;
         Store store;
         int dayCount;
         string prediction;
@@ -27,6 +27,8 @@ namespace Lemonade
         }
         public void StartGame()
         {
+            Console.WriteLine("Enter your name:");
+            player = new Player();
             dayCount = 0;
             store = new Store(player);
             Rules();

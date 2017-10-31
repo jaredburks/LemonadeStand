@@ -8,7 +8,7 @@ namespace Lemonade
 {
     public class Player
     {
-        public string name = "Player1";
+        public string name = Console.ReadLine();
         public double wallet = 20.00;
         public Inventory inventory = new Inventory();
         public Recipe recipe = new Recipe();
