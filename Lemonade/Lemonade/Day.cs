@@ -11,7 +11,7 @@ namespace Lemonade
         List<Customer> customer = new List<Customer>(new Customer[] { });
         public void DayShift(Player player)
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 100; i++)//Loop thru 100 potential customers
             {
                 customer.Add(new Customer());
             }

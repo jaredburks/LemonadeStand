@@ -13,6 +13,10 @@ namespace Lemonade
         public Weather weather = new Weather();
         Store store;
         int dayCount = 0;
+        string prediction;
+        double cashBeforeShift;
+        double dayProfit;
+        double totalProfit;
         public void Rules()
         {
             Console.WriteLine("How to Play:\nYour goal is to make as much money as you can in 7 days by selling lemonade at your lemonade stand.");
@@ -29,16 +33,30 @@ namespace Lemonade
             Console.ReadLine();
             Console.WriteLine("Start a new 7 day game. Press any key to continue.\n");
             Console.ReadLine();
-            //Need to loop thru 7 days
-            string prediction = weather.Forecast();
-            store.SellToPlayer();
-            //TODO:Start Day 1
-            Console.WriteLine(prediction);
-            day.DayShift(player);
-            //TODO:Show profit from day.
-            //TODO:Next day(for 7 days)
-            //TODO:Show total profit
+            while(dayCount < 7)
+            {
+                prediction = weather.Forecast();
+                store.SellToPlayer();
+                //Start Day 1
+                Console.WriteLine(prediction);
+                cashBeforeShift = player.wallet;
+                day.DayShift(player);
+                dayProfit = player.wallet - cashBeforeShift;
+                totalProfit += dayProfit;
+                GetDayProfit();
+                dayCount++;
+            }
+            GetTotalProfit();
+            Console.ReadLine();
             //TODO:Link to database to save results(Name, profit)
+        }
+        public void GetDayProfit()
+        {
+            Console.WriteLine("Day's Profit: $" + dayProfit);
+        }
+        public void GetTotalProfit()
+        {
+            Console.WriteLine("Total Profit: $" + totalProfit);
         }
     }
 }
