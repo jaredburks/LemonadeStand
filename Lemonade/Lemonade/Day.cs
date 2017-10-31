@@ -9,7 +9,7 @@ namespace Lemonade
     public class Day
     {
         List<Customer> customer = new List<Customer>(new Customer[] { });
-        public void DayShift(Player player)
+        public void DayShift(Weather wearther, Player player)
         {
             for (int i = 0; i < 100; i++)//Loop thru 100 potential customers
             {
@@ -17,7 +17,8 @@ namespace Lemonade
             }
             foreach(Customer element in customer)
             {
-                element.Purchase(player);
+                element.Decide(wearther, player);
+                //element.Purchase(player);
             }
         }
     }

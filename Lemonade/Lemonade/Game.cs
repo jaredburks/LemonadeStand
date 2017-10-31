@@ -47,7 +47,7 @@ namespace Lemonade
                 //Start Day 1
                 Console.WriteLine(prediction);
                 cashBeforeShift = player.wallet;
-                day.DayShift(player);
+                day.DayShift(weather, player);
                 dayProfit = player.wallet - cashBeforeShift;
                 totalProfit += dayProfit;
                 GetDayProfit();
