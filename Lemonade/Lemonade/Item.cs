@@ -11,6 +11,7 @@ namespace Lemonade
         public Inventory inventory;
         public int expire;
 
+        //SOLID PRINCIPAL: OPEN/CLOSED PRICIPAL used for rotten method. Different items expire at different times.
         public virtual void Rotten()//Will destroy expired supplies and give a message
         {
             //TODO: Destroy ice

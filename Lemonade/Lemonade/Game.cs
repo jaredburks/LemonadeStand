@@ -8,6 +8,7 @@ namespace Lemonade
 {
     public class Game
     {
+        public GameDatabase database = new GameDatabase();
         public Day day = new Day();
         public Weather weather = new Weather();
         public Player player;
@@ -34,8 +35,8 @@ namespace Lemonade
             Console.WriteLine("Press any key to start a new 7 day game.\n");
             Console.ReadLine();
             PlayGame();
+            database.RecordGame(player.name, player.wallet);
             PlayAgain();
-            //TODO:Link to database to save results(Name, profit)
         }
         public void PlayGame()
         {
@@ -44,7 +45,6 @@ namespace Lemonade
             {
                 prediction = weather.Forecast();
                 store.SellToPlayer();
-                //Start Day 1
                 Console.WriteLine(prediction);
                 cashBeforeShift = player.wallet;
                 day.DayShift(weather, player);
@@ -55,6 +55,7 @@ namespace Lemonade
             }
             GetTotalProfit();
         }
+        //SOLID PRINCIPAL: SINGLE RESPONSIBILITY
         public void GetDayProfit()
         {
             Console.WriteLine("Day's Profit: $" + dayProfit.ToString("#.##") + "\n");

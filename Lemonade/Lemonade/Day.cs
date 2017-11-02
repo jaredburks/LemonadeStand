@@ -18,7 +18,6 @@ namespace Lemonade
             foreach(Customer element in customer)
             {
                 element.Decide(wearther, player);
-                //element.Purchase(player);
             }
         }
     }
